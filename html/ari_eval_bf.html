@@ -99,6 +99,37 @@
                 z-index: 2;
             }
 
+            header .icon-bar{
+                display: flex;
+                align-items: center;
+                margin-top: -40px;
+                z-index: 3;
+            }
+            header .icon-bar > .icon{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 calc(var(--screen-width) / 8 - 50px);
+            }
+            header .icon-bar > .icon img{
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 50%;
+                background-color: var(--white);
+            }
+            header .icon-bar > .icon span{
+                width: 100%;
+                text-align: center;
+                font-size: 11pt;
+                margin-top: -20px;
+                color: #000;
+                background-color: var(--theme-light-color);
+                font-weight: 600;
+                overflow-wrap: normal;
+            }
+
             /* main */
             .content{
                 width: 100%;
@@ -137,7 +168,7 @@
                 align-items: center;
             }
             .news-container > .news-item img{
-                width: 50px;
+                width: 65px;
             }
 
             .arrow-list{
@@ -181,6 +212,24 @@
                 <div class="img-container">
                     <img src="../static/img/top.png" alt="camera image">
                 </div>
+            </div>
+            <div class="icon-bar">
+                <a class="icon" href="">
+                    <img src="../static/img/charactor.png" alt="home">
+                    <span>HOME</span>
+                </a>
+                <a class="icon" href="">
+                    <img src="../static/img/charactor.png" alt="home">
+                    <span>ARI</span>
+                </a>
+                <a class="icon" href="">
+                    <img src="../static/img/charactor.png" alt="home">
+                    <span>DOWNLOAD</span>
+                </a>
+                <a class="icon" href="">
+                    <img src="../static/img/charactor.png" alt="home">
+                    <span>HELP</span>
+                </a>
             </div>
         </header>
         <div class="content">
@@ -256,6 +305,7 @@
                 </div>
             </div>
 
+            <!-- サイドバー -->
             <div class="nav-bar">
                 <ul class="arrow-list">
                     <strong>リンク</strong>
@@ -310,9 +360,6 @@
                         <img src="../static/img/charactor.png" alt="News 2024.1.5">
                         <strong>重要なアップデートのお知らせ</strong>
                         <p>Ari Evalの重要なアップデートです。ご確認ください。</p>
-                    </a>
-                    <a class="news-item" href="">
-                        <strong>過去のお知らせ</strong>
                     </a>
                 </div>
             </div>

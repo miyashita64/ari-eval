@@ -99,37 +99,6 @@
                 z-index: 2;
             }
 
-            header .icon-bar{
-                display: flex;
-                align-items: center;
-                margin-top: -40px;
-                z-index: 3;
-            }
-            header .icon-bar > .icon{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0 calc(var(--screen-width) / 8 - 50px);
-            }
-            header .icon-bar > .icon img{
-                width: 100px;
-                height: 100px;
-                object-fit: cover;
-                border-radius: 50%;
-                background-color: var(--white);
-            }
-            header .icon-bar > .icon span{
-                width: 100%;
-                text-align: center;
-                font-size: 11pt;
-                margin-top: -20px;
-                color: #000;
-                background-color: var(--theme-light-color);
-                font-weight: 600;
-                overflow-wrap: normal;
-            }
-
             /* main */
             .content{
                 width: 100%;
@@ -168,7 +137,7 @@
                 align-items: center;
             }
             .news-container > .news-item img{
-                width: 65px;
+                width: 50px;
             }
 
             .arrow-list{
@@ -212,24 +181,6 @@
                 <div class="img-container">
                     <img src="../static/img/top.png" alt="camera image">
                 </div>
-            </div>
-            <div class="icon-bar">
-                <a class="icon" href="">
-                    <img src="../static/img/charactor.png" alt="home">
-                    <span>HOME</span>
-                </a>
-                <a class="icon" href="">
-                    <img src="../static/img/charactor.png" alt="home">
-                    <span>ARI</span>
-                </a>
-                <a class="icon" href="">
-                    <img src="../static/img/charactor.png" alt="home">
-                    <span>DOWNLOAD</span>
-                </a>
-                <a class="icon" href="">
-                    <img src="../static/img/charactor.png" alt="home">
-                    <span>HELP</span>
-                </a>
             </div>
         </header>
         <div class="content">
@@ -286,41 +237,6 @@
                     </ul>
                 </div>
 
-                <div class="report-content">
-                    <h3>カスタムレポート</h3>
-                    <p>当社のサービスでは、ユーザーが特定の要件やニーズに合わせてデータを分析できるように、カスタムレポート機能を提供しています。</p>
-            
-                    <p>主な特徴:</p>
-                    <ul class="arrow-list">
-                        <li style="--arrow-list-item-index: 1;">
-                            <strong>柔軟性</strong>
-                            カスタムレポートは柔軟で、ユーザーが必要なデータ項目や表示形式を選択できます。
-                        </li>
-                        <li style="--arrow-list-item-index: 2;">
-                            <strong>フィルタリング</strong>
-                            データを特定の条件で絞り込むためのフィルタリングオプションが豊富に用意されています。
-                        </li>
-                        <li style="--arrow-list-item-index: 3;">
-                            <strong>ダウンロード</strong>
-                            作成したレポートはCSVやPDFなどの形式でダウンロードできます。
-                        </li>
-                    </ul>
-            
-                    <p>カスタムレポートを作成するには、以下の手順に従ってください。</p>
-                    <ul class="arrow-list">
-                        <li style="--arrow-list-item-index: 1;">
-                            ダッシュボード画面で「レポート作成」ボタンをクリックします。</li>
-                        <li style="--arrow-list-item-index: 2;">
-                            必要なデータ項目を選択し、表示形式やフィルタリング条件を設定します。</li>
-                        <li style="--arrow-list-item-index: 3;">
-                            「作成」ボタンをクリックして、カスタムレポートを生成します。</li>
-                        <li style="--arrow-list-item-index: 4;">
-                            生成されたレポートはダウンロードや共有が可能です。</li>
-                    </ul>
-            
-                    <p>カスタムレポート機能を利用して、ビジネスの効率向上やデータ分析の精度向上を実現しましょう。</p>
-                </div>
-
                 <div>
                     <h3>利用ガイド</h3>
                     <p>
@@ -340,7 +256,6 @@
                 </div>
             </div>
 
-            <!-- サイドバー -->
             <div class="nav-bar">
                 <ul class="arrow-list">
                     <strong>リンク</strong>
@@ -352,9 +267,6 @@
                     </li>
                     <li>
                         <a href="" alt="Ariが提供する主な機能についての詳細ページへのリンク">機能</a>
-                    </li>
-                    <li>
-                        <a href="" alt="Ari評価システムのアプリのダウンロードページへのアクセス">ダウンロード</a>
                     </li>
                     <li>
                         <a href="" alt="Ariの使用方法や最適な活用法に関するガイドやチュートリアルへのアクセス">ガイドとチュートリアル</a>
@@ -369,6 +281,9 @@
                         <a href="" alt="Ariのアップデートに関する情報や変更履歴へのリンク">アップデート履歴</a>
                     </li>
                     <li>
+                        <a href="" alt="Ari評価システムのアプリのダウンロードページへのアクセス">ダウンロード</a>
+                    </li>
+                    <li>
                         <a href="" alt="イベントや重要なお知らせに関する情報へのリンク">お知らせ</a>
                     </li>
                     <li>
@@ -378,11 +293,6 @@
 
                 <div class="news-container">
                     <strong>News</strong>
-                    <a class="news-item" href="新機能のニュースへのリンク">
-                        <img src="../static/img/charactor.png" alt="News 2024.2.1">
-                        <strong>新機能の追加について</strong>
-                        <p>Ari Evalに新機能を導入しました。<br>詳細はこちらから。</p>
-                    </a>
                     <a class="news-item" href="">
                         <img src="../static/img/charactor.png" alt="News 2024.1.23">
                         <strong>フィードバックに基づく進化</strong>
@@ -395,6 +305,11 @@
                             Ari Evalが新しくリアルタイムコラボレーション機能を導入しました。<br>
                             詳細はこちらから。
                         </p>
+                    </a>
+                    <a class="news-item" href="">
+                        <img src="../static/img/charactor.png" alt="News 2024.1.5">
+                        <strong>重要なアップデートのお知らせ</strong>
+                        <p>Ari Evalの重要なアップデートです。ご確認ください。</p>
                     </a>
                     <a class="news-item" href="">
                         <strong>過去のお知らせ</strong>
