@@ -12,7 +12,7 @@
                 --black: #444;
                 --gray: #ddd;
                 --top-title-font-size: 30pt;
-                --top-title-container-width: calc(var(--top-title-font-size) * 3.4);
+                --top-title-container-width: calc(var(--top-title-font-size) * 3.2);
                 --arrow-list-item-index: 0;
             }
             *{
@@ -24,7 +24,7 @@
                 overflow-x: hidden;
             }
             #body-container{
-                width: calc(var(--screen-width) * 0.8);
+                width: var(--screen-width);
                 height: 2000px;
                 margin: 0 auto;
             }
@@ -138,12 +138,8 @@
                 display: flex;
             }
 
-            .main-content{
-                flex-grow: 3;
-            }
-
             .nav-bar{
-                flex-grow: 1;
+                min-width: 200px;
                 display: flex;
                 flex-direction: column;
                 overflow-wrap: normal;
@@ -159,7 +155,7 @@
             }
             .news-container > .news-item{
                 width: 100%;
-                max-height: 175px;
+                max-height: 155px;
                 overflow-y: hidden;
                 font-size: 10pt;
                 color: #000;
@@ -172,7 +168,7 @@
                 align-items: center;
             }
             .news-container > .news-item img{
-                width: 50px;
+                width: 65px;
             }
 
             .arrow-list{
@@ -226,7 +222,7 @@
         </header>
         <div class="content">
             <div class="main-content">
-                <h2>ようこそ、「Ari Eval Page」へ！</h2>
+                <h2>ようこそ、Ari Evalへ！</h2>
                 <div>
                     <p>
                         このページは、Ariと呼ばれる新しい評価システムに関連する情報を提供しています。
@@ -299,15 +295,15 @@
 
             <div class="nav-bar">
                 <ul class="arrow-list">
-                    <strong>サイトマップ</strong>
-                    <li><a href="" alt="Ari Eval Pageのトップページへのリンク。最新の情報やアップデートが表示されます">ホーム</a></li>
+                    <strong>リンク</strong>
+                    <li><a href="" alt="Ari Eval Pageのトップページへのアクセス">ホーム</a></li>
                     <li><a href="" alt="Ari評価システムの概要や特徴、利点に関する情報へのアクセス">Ariについて</a></li>
-                    <li><a href="" alt="Ariが提供する主な機能についての詳細。多角的な評価やリアルタイム分析、ユーザーフィードバックなどに焦点を当てたページへのリンク">機能</a></li>
+                    <li><a href="" alt="Ariが提供する主な機能についての詳細ページへのリンク">機能</a></li>
+                    <li><a href="" alt="Ari評価システムのアプリのダウンロードページへのアクセス">ダウンロード</a></li>
                     <li><a href="" alt="Ariの使用方法や最適な活用法に関するガイドやチュートリアルへのアクセス">ガイドとチュートリアル</a></li>
-                    <li><a href="" alt="Ariに関する質問や技術的なサポートを求めるためのセクション。FAQやお問い合わせフォームへのリンク">サポート</a></li>
+                    <li><a href="" alt="FAQやお問い合わせフォームへのリンク">サポート</a></li>
                     <li><a href="" alt="ユーザーからのフィードバックや成功事例、体験談を共有するページへのアクセス">ユーザーの声</a></li>
                     <li><a href="" alt="Ariのアップデートに関する情報や変更履歴へのリンク">アップデート履歴</a></li>
-                    <li><a href="" alt="Ari評価システムのアプリや関連資料のダウンロードページへのアクセス">ダウンロード</a></li>
                     <li><a href="" alt="イベントや重要なお知らせに関する情報へのリンク">お知らせ</a></li>
                     <li><a href="" alt="ユーザーが直接質問や提案を行えるお問い合わせフォームへのリンク">お問い合わせ</a></li>
                 </ul>
@@ -322,7 +318,7 @@
                     <a class="news-item" href="">
                         <img src="../static/img/charactor.png" alt="News 2024.1.23">
                         <strong>フィードバックに基づく進化</strong>
-                        <p>Ari Evalはフィードバックで進化します。ご意見をお寄せください。</p>
+                        <p>Ari Evalはフィードバックで進化します。ご意見をお待ちしております。</p>
                     </a>
                     <a class="news-item" href="">
                         <img src="../static/img/charactor.png" alt="News 2024.1.8">
@@ -333,9 +329,7 @@
                         </p>
                     </a>
                     <a class="news-item" href="">
-                        <img src="../static/img/charactor.png" alt="News 2024.1.5">
-                        <strong>重要なアップデートのお知らせ</strong>
-                        <p>Ari Evalの重要なアップデートです。ご確認ください。</p>
+                        <strong>過去のお知らせ</strong>
                     </a>
                 </div>
             </div>

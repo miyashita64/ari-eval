@@ -12,7 +12,7 @@
                 --black: #444;
                 --gray: #ddd;
                 --top-title-font-size: 30pt;
-                --top-title-container-width: calc(var(--top-title-font-size) * 3.4);
+                --top-title-container-width: calc(var(--top-title-font-size) * 3.2);
                 --arrow-list-item-index: 0;
             }
             *{
@@ -99,37 +99,6 @@
                 z-index: 2;
             }
 
-            header .icon-bar{
-                display: flex;
-                align-items: center;
-                margin-top: -40px;
-                z-index: 3;
-            }
-            header .icon-bar > .icon{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0 calc(var(--screen-width) / 8 - 50px);
-            }
-            header .icon-bar > .icon img{
-                width: 100px;
-                height: 100px;
-                object-fit: cover;
-                border-radius: 50%;
-                background-color: var(--white);
-            }
-            header .icon-bar > .icon span{
-                width: 100%;
-                text-align: center;
-                font-size: 11pt;
-                margin-top: -20px;
-                color: #000;
-                background-color: var(--theme-light-color);
-                font-weight: 600;
-                overflow-wrap: normal;
-            }
-
             /* main */
             .content{
                 width: 100%;
@@ -138,12 +107,8 @@
                 display: flex;
             }
 
-            .main-content{
-                flex-grow: 3;
-            }
-
             .nav-bar{
-                flex-grow: 1;
+                min-width: 200px;
                 display: flex;
                 flex-direction: column;
                 overflow-wrap: normal;
@@ -159,7 +124,7 @@
             }
             .news-container > .news-item{
                 width: 100%;
-                max-height: 175px;
+                max-height: 155px;
                 overflow-y: hidden;
                 font-size: 10pt;
                 color: #000;
@@ -217,16 +182,10 @@
                     <img src="../static/img/top.png" alt="camera image">
                 </div>
             </div>
-            <div class="icon-bar">
-                <a class="icon" href=""><img src="../static/img/charactor.png" alt="home"><span>HOME</span></a>
-                <a class="icon" href=""><img src="../static/img/charactor.png" alt="home"><span>ARI</span></a>
-                <a class="icon" href=""><img src="../static/img/charactor.png" alt="home"><span>DOWNLOAD</span></a>
-                <a class="icon" href=""><img src="../static/img/charactor.png" alt="home"><span>HELP</span></a>
-            </div>
         </header>
         <div class="content">
             <div class="main-content">
-                <h2>ようこそ、「Ari Eval Page」へ！</h2>
+                <h2>ようこそ、Ari Evalへ！</h2>
                 <div>
                     <p>
                         このページは、Ariと呼ばれる新しい評価システムに関連する情報を提供しています。
@@ -299,15 +258,15 @@
 
             <div class="nav-bar">
                 <ul class="arrow-list">
-                    <strong>サイトマップ</strong>
-                    <li><a href="" alt="Ari Eval Pageのトップページへのリンク。最新の情報やアップデートが表示されます">ホーム</a></li>
+                    <strong>リンク</strong>
+                    <li><a href="" alt="Ari Eval Pageのトップページへのアクセス">ホーム</a></li>
                     <li><a href="" alt="Ari評価システムの概要や特徴、利点に関する情報へのアクセス">Ariについて</a></li>
-                    <li><a href="" alt="Ariが提供する主な機能についての詳細。多角的な評価やリアルタイム分析、ユーザーフィードバックなどに焦点を当てたページへのリンク">機能</a></li>
+                    <li><a href="" alt="Ariが提供する主な機能についての詳細ページへのリンク">機能</a></li>
                     <li><a href="" alt="Ariの使用方法や最適な活用法に関するガイドやチュートリアルへのアクセス">ガイドとチュートリアル</a></li>
-                    <li><a href="" alt="Ariに関する質問や技術的なサポートを求めるためのセクション。FAQやお問い合わせフォームへのリンク">サポート</a></li>
+                    <li><a href="" alt="FAQやお問い合わせフォームへのリンク">サポート</a></li>
                     <li><a href="" alt="ユーザーからのフィードバックや成功事例、体験談を共有するページへのアクセス">ユーザーの声</a></li>
                     <li><a href="" alt="Ariのアップデートに関する情報や変更履歴へのリンク">アップデート履歴</a></li>
-                    <li><a href="" alt="Ari評価システムのアプリや関連資料のダウンロードページへのアクセス">ダウンロード</a></li>
+                    <li><a href="" alt="Ari評価システムのアプリのダウンロードページへのアクセス">ダウンロード</a></li>
                     <li><a href="" alt="イベントや重要なお知らせに関する情報へのリンク">お知らせ</a></li>
                     <li><a href="" alt="ユーザーが直接質問や提案を行えるお問い合わせフォームへのリンク">お問い合わせ</a></li>
                 </ul>
@@ -317,7 +276,7 @@
                     <a class="news-item" href="">
                         <img src="../static/img/charactor.png" alt="News 2024.1.23">
                         <strong>フィードバックに基づく進化</strong>
-                        <p>Ari Evalはフィードバックで進化します。ご意見をお寄せください。</p>
+                        <p>Ari Evalはフィードバックで進化します。ご意見をお待ちしております。</p>
                     </a>
                     <a class="news-item" href="">
                         <img src="../static/img/charactor.png" alt="News 2024.1.8">
@@ -331,6 +290,9 @@
                         <img src="../static/img/charactor.png" alt="News 2024.1.5">
                         <strong>重要なアップデートのお知らせ</strong>
                         <p>Ari Evalの重要なアップデートです。ご確認ください。</p>
+                    </a>
+                    <a class="news-item" href="">
+                        <strong>過去のお知らせ</strong>
                     </a>
                 </div>
             </div>
