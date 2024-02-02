@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="15; URL=">
+        <style>
+            :root{
+                --screen-width: 785px;
+                --theme-color: #c4a06c;
+                --theme-light-color: #eebf7d;
+                --theme-dark-color: #8b6b4e;
+                --white: #fafafa;
+                --black: #444;
+                --gray: #ddd;
+                --top-title-font-size: 40pt;
+                --top-title-container-width: calc(var(--top-title-font-size) * 3);
+                --arrow-list-item-index: 0;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                width: var(--screen-width);
+                width: calc(var(--screen-width) * 0.8);
+                height: 2000px;
+                margin: 0 auto;
+                background-color: var(--white);
+            }
+            a{
+                text-decoration: none;
+            }
+
+            h2, strong{
+                color: var(--theme-dark-color);
+            }
+            h2{
+                color: var(--theme-color);
+                text-align: center;
+                border-top: solid 1px var(--gray);
+                border-bottom: solid 1px var(--gray);
+            }
+
+            /* header */
+            header{
+                display: flex;
+                flex-flow: column;
+            }
+            header .top-container{
+                display: flex;
+                justify-content: center;
+            }
+
+            header .top-container .title-container, header .top-container .img-container{
+                display: flex;
+                align-items: stretch;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            header .top-container .title-container{
+                width: var(--top-title-container-width);
+                background-color: var(--theme-color);
+                padding-left: 30px;
+            }
+            header .top-container .img-container{
+                max-width: calc(100% - var(--top-title-container-width))
+            }
+            header .top-container .img-container img{
+                width: 100%;
+            }
+            header .top-container .title-container h1, header .top-container .img-container::after{
+                font-size: var(--top-title-font-size);
+                top: 60%;
+                position: absolute;
+            }
+            header .top-container .img-container::after{
+                content: "Welcome, Ari Eval";
+                color: var(--white);
+                left: calc(var(--top-title-container-width) * -0.9);
+                z-index: 1;
+            }
+            header .top-container .title-container .charactor{
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                background-color: var(--white);
+                position: absolute;
+                top: 30px;
+                left: calc(50% - 60px);
+                border-radius: 50%;
+                overflow: hidden;
+                z-index: 2;
+            }
+
+            header .icon-bar{
+                display: flex;
+                align-items: center;
+                margin-top: -40px;
+                z-index: 3;
+            }
+            header .icon-bar > .icon{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 calc(var(--screen-width) / 8 - 50px);
+            }
+            header .icon-bar > .icon img{
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 50%;
+                background-color: var(--white);
+            }
+            header .icon-bar > .icon span{
+                width: 100%;
+                text-align: center;
+                font-size: 13pt;
+                margin-top: -20px;
+                color: #000;
+                background-color: var(--theme-light-color);
+                font-weight: 600;
+                overflow-wrap: normal;
+            }
+
+            /* main */
+            .content{
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                display: flex;
+            }
+
+            .nav-bar{
+                display: flex;
+                flex-direction: column;
+                overflow-wrap: normal;
+            }
+            .nav-bar > a{
+                width: 11em;
+                overflow-wrap: normal;
+            }
+
+            .arrow-list{
+                list-style: none;
+                padding: 0;
+            }
+            .arrow-list > li{
+                margin-left: calc(10px * var(--arrow-list-item-index));
+                padding-left: 15px;
+                position: relative;
+            }
+            .arrow-list > li::before{
+                content: ">";
+                font-weight: 900;
+                color: var(--theme-dark-color);
+                position: absolute;
+                left: 0;
+            }
+
+            /* footer */
+            footer{
+                height: 300px;
+                text-align: center;
+                color: var(--theme-dark-color);
+                padding: 20px;
+                border-top: solid 2px var(--theme-light-color);
+                /* background-color: var(--theme-light-color); */
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="top-container">
+                <div class="title-container">
+                    <h1>Welcome, Ari Eval</h1>
+                    <img class="charactor" src="img/charactor.png" alt="camera image">
+                </div>
+                <div class="img-container">
+                    <img src="img/top.png" alt="camera image">
+                </div>
+            </div>
+            <div class="icon-bar">
+                <a class="icon" href=""><img src="img/charactor.png" alt="home"><span>HOME</span></a>
+                <a class="icon" href=""><img src="img/charactor.png" alt="home"><span>ARI</span></a>
+                <a class="icon" href=""><img src="img/charactor.png" alt="home"><span>DOWNLOAD</span></a>
+                <a class="icon" href=""><img src="img/charactor.png" alt="home"><span>HELP</span></a>
+            </div>
+        </header>
+        <div class="content">
+            <div class="main-content">
+                <h2>ようこそ、「Ari Eval Page」へ！</h2>
+                <div>
+                    <p>
+                        このページは、Ariと呼ばれる新しい評価システムに関連する情報を提供しています。
+                        Ariは、様々なコンテキストでの評価や分析に役立つ革新的なツールです。
+                        以下は、Ariが提供する主な機能の概要です。
+                        <ul class="arrow-list" style="--arrow-list-item-index: 0;">
+                            <li style="--arrow-list-item-index: 1;">
+                                <strong>多角的な評価：</strong>
+                                <p>Ariは、異なる側面から対象を評価し、包括的な結果を提供します。これにより、より深い理解と洞察が可能です。</p>
+                            </li>
+                            <li style="--arrow-list-item-index: 2;">
+                                <strong>リアルタイム分析：</strong>
+                                <p>Ariはリアルタイムでデータを分析し、変化する状況に即座に対応します。これにより、迅速かつ効果的な意思決定が可能です。</p>
+                            </li>
+                            <li style="--arrow-list-item-index: 3;">
+                                <strong>ユーザーフィードバック：</strong>
+                                <p>ユーザーからのフィードバックを元に、Ariは自己学習し進化します。使用者のニーズに適応し、より精緻な評価を提供します。</p>
+                            </li>
+                            <li style="--arrow-list-item-index: 4;">
+                                <strong>シンプルな操作性：</strong>
+                                <p>Ariは直感的で使いやすいインターフェースを提供し、利用者が簡単に活用できるように工夫されています。</p>
+                            </li>
+                        </ul>
+                        このページでは、Ariの基本的な機能や活用法に関する情報が提供されています。
+                        詳細なガイドやよくある質問については、サポートセクションをご覧ください。
+                        Ariを活用して、新しい視点から世界を見てみませんか？
+                        さあ、Ariとともに情報の奥深くへダイブしましょう！
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="nav-bar">
+                <a href="" alt="Ari Eval Pageのトップページへのリンク。最新の情報やアップデートが表示されます">ホーム</a>
+                <a href="" alt="Ari評価システムの概要や特徴、利点に関する情報へのアクセス">Ariについて</a>
+                <a href="" alt="Ariが提供する主な機能についての詳細。多角的な評価やリアルタイム分析、ユーザーフィードバックなどに焦点を当てたページへのリンク">機能</a>
+                <a href="" alt="Ariの使用方法や最適な活用法に関するガイドやチュートリアルへのアクセス">ガイドとチュートリアル</a>
+                <a href="" alt="Ariに関する質問や技術的なサポートを求めるためのセクション。FAQやお問い合わせフォームへのリンク">サポート</a>
+                <a href="" alt="ユーザーからのフィードバックや成功事例、体験談を共有するページへのアクセス">ユーザーの声</a>
+                <a href="" alt="Ariのアップデートに関する情報や変更履歴へのリンク">アップデート履歴</a>
+                <a href="" alt="Ari評価システムのアプリや関連資料のダウンロードページへのアクセス">ダウンロード</a>
+                <a href="" alt="イベントや重要なお知らせに関する情報へのリンク">お知らせ</a>
+                <a href="" alt="ユーザーが直接質問や提案を行えるお問い合わせフォームへのリンク">お問い合わせ</a>
+            </div> -->
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Ari Eval Page. All rights reserved.</p>
+                <p>Designed by Ari.</p>
+            </div>
+        </footer>
+    </body>
+</html>
