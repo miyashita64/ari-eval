@@ -167,8 +167,11 @@
                 justify-content: left;
                 align-items: center;
             }
-            .news-container > .news-item img{
-                width: 50px;
+            .news-container > .news-item .img-container{
+                width: 47px;
+            }
+            .news-container > .news-item .img-container > img{
+                width: 100%;
             }
 
             .arrow-list{
@@ -346,12 +349,16 @@
                 <div class="news-container">
                     <strong>News</strong>
                     <a class="news-item" href="">
-                        <img src="../static/img/charactor.png" alt="News 2024.1.5">
+                        <div class="img-container">
+                            <img src="../static/img/charactor.png" alt="News 2024.1.5">
+                        </div>
                         <strong>重要なアップデートのお知らせ</strong>
                         <p>Ari Evalの重要なアップデートです。ご確認ください。</p>
                     </a>
                     <a class="news-item" href="">
-                        <img src="../static/img/charactor.png" alt="News 2024.1.8">
+                        <div class="img-container">
+                            <img src="../static/img/charactor.png" alt="News 2024.1.8">
+                        </div>
                         <strong>新機能の追加について</strong>
                         <p>
                             Ari Evalが新しくリアルタイムコラボレーション機能を導入しました。<br>
@@ -359,7 +366,9 @@
                         </p>
                     </a>
                     <a class="news-item" href="">
-                        <img src="../static/img/charactor.png" alt="News 2024.1.23">
+                        <div class="img-container">
+                            <img src="../static/img/charactor.png" alt="News 2024.1.23">
+                        </div>
                         <strong>フィードバックに基づく進化</strong>
                         <p>Ari Evalはフィードバックで進化します。ご意見をお待ちしております。</p>
                     </a>
